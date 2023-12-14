@@ -1,0 +1,438 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Jost', sans-serif;    
+}
+/*
+#encabezado::before{
+    content: "";
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}*/
+
+#encabezado{
+    display: flex;
+   
+    width: 100%;
+    
+    /*background: url(./fondo3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    */
+         
+
+}
+
+
+.img_barra{
+    display: none;
+width: 30px;
+height: 30px;
+position: absolute;
+left: 94%;
+padding: 5px;
+
+
+}
+/*.cont_buscador{
+    width: 20vw;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}*/
+#buscador{
+    position: absolute;
+    top: 30%;
+    left: 78%;
+    width: 20vw;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    border: 1px solid rgb(203, 203, 203);
+    
+}
+
+#barra{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    
+    background-color: black;
+    color: aliceblue;
+    z-index: 2;
+    
+    
+}
+.submenu{
+    height: 80px;
+    width: 150px;   
+    line-height: 5em;
+    text-align: center;
+    transition: 0.2s;
+    
+        
+}
+.cont_submenu{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.submenu:hover{
+    transition: 0.2s;
+    background-color: rgb(18, 18, 18);
+    cursor: pointer;
+    width: 160px;
+   
+}
+#conteiner{
+position: relative;
+background-color: rgb(163, 136, 95);
+
+/*background:url(./fondo.png) no-repeat;
+background-size: cover;*/
+width: 100%;
+height: 100%;
+padding-top: 80px;
+padding-bottom: 80px;
+}
+
+
+
+#seccion2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 600px;
+     
+    margin: auto;
+    background-color: rgb(227, 193, 141);
+   /*background:url(./fondo.png) no-repeat;
+   background-size: cover;*/
+ border-radius: 10px;
+    
+}
+
+#seccion1{
+    animation: animacion_puntos 2s ease-in-out;
+    position: absolute;
+    display: none;
+    width: 25%;
+    height: 50vw;
+    margin: 20px;       
+    background-color: rgb(248, 237, 221);
+    grid-template: 20% 80% / 50% 50%;
+    grid-template-areas: "jugador1 jugador2" "puntos1 puntos2";
+    grid-gap: 2px;
+    border-radius: 10px;
+    z-index: 1;
+
+
+}
+.reiniciar{
+    width: 200px;
+    height: 60px;
+    display: flex;
+    background-color: rgb(253, 176, 33);
+    justify-content: center;
+    align-items: center;
+    
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(252, 213, 145);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.reiniciar:active{
+   
+    border: 1px solid rgb(50, 49, 49);
+}
+
+.jugador1{
+    display: flex;
+    grid-area: jugador1;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(235, 181, 100);
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;  
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.jugador2{
+    display: flex;
+    grid-area: jugador2;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(235, 181, 100);
+    justify-content: center;
+    align-items: center;    
+    font-size: 3vw;  
+    overflow: hidden; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+      
+}
+.puntos1{
+    display: flex;
+    grid-area: puntos1;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(235, 181, 100);
+    justify-content: center;
+    font-size: 3vw;  
+    overflow: hidden;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.puntos2{
+    display: flex;
+    grid-area: puntos2;
+    width: 100%;
+    height: 100%;   
+    background-color: rgb(235, 181, 100);
+    justify-content: center;
+    font-size: 3vw;  
+    overflow: hidden;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding-top: 0;
+    width: 80%;
+    height: 100%;
+ 
+      
+}
+
+#cont-usuarios{
+    width: 450px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(10, 10, 10);
+    color: white;
+    border-radius: 10px;
+    margin-top: 100px;
+    box-shadow: 14px 15px 10px rgba(0, 0, 0, 0.3);
+}
+#cont-usuarios input{
+    margin: 10px;
+}
+#boton{
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;  
+    font-size: 15px;
+    background-color: rgb(227, 169, 9); 
+    color: rgb(225, 225, 225);
+    border: none;
+    
+}
+
+#boton:hover{
+    cursor: pointer ;
+    background-color: rgb(188, 132, 0); 
+    transition: 0.2s;
+}
+#cont p{
+  font-size: 20px;
+   margin-top: 5px;
+   
+}
+.jugador-login{
+  display: flex;
+  width: 40%;
+  height: 25px;
+  background-color: rgb(57, 57, 57);
+  border: 1px solid rgb(255, 197, 88);
+  border-radius: 10px;
+  color: aliceblue;
+  opacity: 0.8;
+  margin-top: 20px;
+  
+}
+input:focus{
+    transition: 0.5s;
+    outline: 1px solid orange;
+    opacity: 1;
+}
+
+
+#submenu_juegos_cont{
+list-style-type: none;
+
+width: 170px;
+height: 0;
+overflow: hidden;
+align-items: center;
+text-align: center;
+left: 43%;
+
+}
+.submenu_juegos{
+    width: 100%;
+
+background-color: rgb(0, 0, 0);
+    
+
+ 
+}
+.submenu_juegos:hover{
+    background-color: rgb(29, 29, 29);
+}
+
+footer{
+    background-color: black;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    
+}
+footer a{
+color: white;
+font-size: 15px;
+font-weight: 800;
+text-decoration: none;   
+transition: 0.3s;
+}
+footer a:hover{
+    font-size: 20px;
+    transition: 0.3s;
+}
+@keyframes animacion_puntos{
+    from{
+        
+        left: -50%;
+    }
+    to{
+        
+        left: 0;
+    }
+}
+@keyframes animacion_puntos_salida{
+    from{
+        
+        left: 0;
+    }
+    to{
+        
+        left: -50%;
+    }
+}
+@media screen and (max-width:600px) {
+    .cont_submenu{
+        flex-direction: column;
+        position: absolute;
+        left: 0vw;
+        top: 12vw;
+        width: 25vw;
+        background-color: black;     
+    }
+  .submenu:hover{
+    width: 15vw;
+    background-color: rgb(0, 0, 0);
+  }
+#submenu_juegos_cont{
+    list-style-type: none;
+    position: absolute;
+    width: 25vw;
+
+   background-color: aliceblue;
+    align-items: center;
+    text-align: center;
+    left: 0vw;
+    top: 31vw;
+    
+    }
+    .submenu_juegos:hover{
+        background-color: black;
+    }
+#barra li:active{
+    background-color: rgb(9, 9, 9);
+  }
+  
+    #buscador{
+        left: 72%;
+        width: 25vw;
+    }
+    .img_barra{
+        display: block;
+        left: 2vw;
+    }
+    #seccion2{
+        width: 80%;
+        padding-top: 0;
+    }
+    #seccion2{
+        width: 90%;
+    
+    }
+  #tablero_bingo{
+  
+    width: 270px;
+    height: 260px;
+    margin-top: 50px;
+   
+    grid-template-columns: repeat(5, 50px);
+    grid-template-rows: repeat(5, 50px);
+}  
+
+#cont-num{
+    width: 100px;
+    height: 70px;
+    font-size: 5vw;
+    margin-top: 50px;
+}
+.cuadrados-bingo{
+    font-size: 4vw;
+}
+#tablero{
+    width: 310px;
+    height: 310px;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);   
+ 
+    
+}
+#cont-usuarios{
+    margin-bottom: 200px;
+    width: 300px;
+    height: 200px;
+}
+#cont-usuarios p{
+    font-size: 15px;
+}
+.jugador-login{
+    width: 200px;
+}
+
+#ganadorx{
+top: 60px;
+font-size: 12vw;
+}
+}
+
+
